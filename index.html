@@ -36,6 +36,7 @@
 					<ul>
 						<li>you can easily see and edit your codebase at each saved change (or "commit")</li>
 						<li>you can branch off from the codebase and make changes without risking accidentally screwing up the codebase</li>
+						<li>you can merge branches together, so it's easier to collaborate with people! ☺️ </li>
 					</ul>
 				</section>
 
@@ -55,8 +56,9 @@
 				</section>
 
 				<section>
-					<h3>Getting code on to the repo:</h3>
-					<pre class="hljs">
+					<section>
+						<h3>Getting code on to the repo:</h3>
+						<pre class="hljs">
 // after you've made some changes, see which files you've changed:
 git status
 
@@ -69,9 +71,57 @@ git commit -m 'I am a helpful message'
 
 // right now this commit is still local (only on your computer)
 // push this change online!
-git push origin HEAD
-					</pre>
+git push -u origin HEAD
+						</pre>
+					</section>
+
+					<section>
+						<h3>Seeing the changes you've made:</h3>
+						<ul>
+							<li>see which files you've changed:<pre class='hljs'>git status</pre></li>
+							<li>see the actual changes<pre class='hljs'>git diff</pre></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Adding changes to be commited:</h3>
+						<ul>
+							<li>add all changes: <pre class='hljs'>git add .</pre></li>
+							<li>add just a file or folder: <pre class='hljs'>git add path/to/file</pre></li>
+							<li>ah! nvm! I don't want any of these changes!😱 <pre class='hljs'>git reset</pre></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Oh shoot...I don't want those changes but already pushed:</h3>
+						<ul>
+							<li>get the commit number from log<pre class='hljs'>git log</pre></li>
+							<li>revert that commit<pre class='hljs'>git revert 784fa95905f4f9f409bb567fe3a7ca48998825fd</pre></li>
+							<li>(don't forget to push!)</li>
+						</ul>
+					</section>
+
 				</section>
+
+				<section>
+					<h3>git status is your best friend</h3>
+						<ul>
+							<li>always safe to use</li>
+							<li>see which files changed</li>
+							<li>see which files haven't been added</li>
+							<li>see which files are added but NOT commited</li>
+						</ul>
+				</section>
+
+				<section>
+					<h3>Branching! 🌳 🍃</h3>
+						<ul>
+							<li>create new branch from current branch you're on:<pre class='hljs'>git checkout -b new-branch-name</pre></li>
+							<li>push the branch so it doesn't get lost if something happens to your computer 🔥 <pre class='hljs'>git push -u origin HEAD</pre></li>
+							<li>probably do <a href="#/3">these commands</a> a bunch of times again</li>
+						</ul>
+				</section>
+
 			</div>
 		</div>
 
