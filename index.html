@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>hackNYU github workshop</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,54 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					Please fill out this <a href="https://goo.gl/forms/L3IiLNdDqXWi2W0o1">google form!</a>
+					<aside class="notes">
+						ask about operating systems
+					</aside>
+				</section>
+
+				<section>
+					<h2>Why is git awesome?</h2>
+					<ul>
+						<li>you can easily see and edit your codebase at each saved change (or "commit")</li>
+						<li>you can branch off from the codebase and make changes without risking accidentally screwing up the codebase</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Setting up a repo</h2>
+					<ul>
+						<li>Setting up github for the first time:
+						<ul>
+							<li><a href="https://help.github.com/articles/set-up-git/">Set up</a></li>
+							<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">SSH keys</a></li>
+						</ul>
+						</li>
+						<li>Creating: <a href="https://github.com/new">follow the directions here!</a></li>
+						<li>Forking: <a href="https://help.github.com/articles/fork-a-repo/">click fork!</a></li>
+						<li>Clone (i.e. download) your repo!:<pre class="hljs">git clone git@github.com:username/repo.git</pre></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Getting code on to the repo:</h3>
+					<pre class="hljs">
+// after you've made some changes, see which files you've changed:
+git status
+
+// mark all of your changes to be commited
+git add .
+
+// actually commit the changes,
+// and give yourself a helpful reminder what the change is!
+git commit -m 'I am a helpful message'
+
+// right now this commit is still local (only on your computer)
+// push this change online!
+git push origin HEAD
+					</pre>
+				</section>
 			</div>
 		</div>
 
