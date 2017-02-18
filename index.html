@@ -24,7 +24,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+
+				<section data-background="http://img3.wikia.nocookie.net/__cb20120725230829/spongebob/images/f/f5/SpongeBob_SquarePants_Smiling_-_Artwork.png" data-background-size="300px" data-background-position="bottom right">
 					Please fill out this <a href="https://goo.gl/forms/L3IiLNdDqXWi2W0o1">google form!</a>
 					<aside class="notes">
 						ask about operating systems
@@ -56,21 +57,21 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-background="https://thepeeword.files.wordpress.com/2013/09/patrick.png" data-background-position="bottom left" data-background-size="400px">
 						<h3>Getting code on to the repo:</h3>
 						<pre class="hljs">
-// after you've made some changes, see which files you've changed:
+<span style="color:grey">// after you've made some changes, see which files you've changed:</span>
 git status
 
-// mark all of your changes to be commited
+<span style="color:grey">// mark all of your changes to be commited</span>
 git add .
 
-// actually commit the changes,
-// and give yourself a helpful reminder what the change is!
+<span style="color:grey">// actually commit the changes,
+// and give yourself a helpful reminder what the change is!</span>
 git commit -m 'I am a helpful message'
 
-// right now this commit is still local (only on your computer)
-// push this change online!
+<span style="color:grey">// right now this commit is still local (only on your computer)
+// push this change online!</span>
 git push -u origin HEAD
 						</pre>
 					</section>
@@ -103,9 +104,9 @@ git push -u origin HEAD
 
 				</section>
 
-				<section>
-					<h3>git status is your best friend</h3>
-						<ul>
+				<section data-background="https://az616578.vo.msecnd.net/files/2015/11/26/635841444292998546247571404_sbpatrick.gif">
+					<h3 style="background:#222; opacity:0.75">git status is your best friend</h3>
+						<ul style="background:#222; opacity:0.75">
 							<li>always safe to use</li>
 							<li>see which files changed</li>
 							<li>see which files haven't been added</li>
@@ -117,10 +118,41 @@ git push -u origin HEAD
 					<h3>Branching! 🌳 🍃</h3>
 						<ul>
 							<li>create new branch from current branch you're on:<pre class='hljs'>git checkout -b new-branch-name</pre></li>
-							<li>push the branch so it doesn't get lost if something happens to your computer 🔥 <pre class='hljs'>git push -u origin HEAD</pre></li>
+							<li>push the branch so it doesn't get lost if something happens to your computer 🔥 💻 <pre class='hljs'>git push -u origin HEAD</pre></li>
 							<li>probably do <a href="#/3">these commands</a> a bunch of times again</li>
 						</ul>
 				</section>
+
+				<section>
+					<h3>Merging</h3>
+						<ul>
+							<li>switch to branch you want to merge to<pre class='hljs'>git checkout branch-to-merge-to</pre></li>
+							<li>merge other branch, but don't commit so you can test the merge first!<pre class='hljs'>git merge --no-commit branch-i-want-to-merge-with</pre></li>
+							<li>then commit<pre class='hljs'>git commit -m "okay we're good 👍 "</pre></li>
+							<li>pushhhhhh!<pre class='hljs'>git push origin HEAD</pre></li>
+						</ul>
+				</section>
+
+				<section>
+					<h3>My favorite little things about git</h3>
+<pre class="hljs">
+<span style="color:grey">// checkout the previous branch I was on</span>
+git checkout -
+
+<span style="color:grey">// git is not letting me switch branches 
+// because I have uncommited changes
+// let's stash them!</span>
+git stash
+
+<span style="color:grey">// wait I want those changes back!</span>
+git stash pop
+
+<span style="color:grey">// I want my team member's commit 
+// because his/her change will be helpful</span>
+git cherry-pick commit-number
+</pre>
+				</section>
+
 
 			</div>
 		</div>
