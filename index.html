@@ -183,6 +183,16 @@ git push -u origin HEAD
         </section>
 
         <section>
+          <h3>HEAD</h3>
+            <ul>
+              <li>HEAD is a reference to the current commit</li>
+              <li>In most situations, it refers to the current branch</li>
+              <li>If the current branch is master, this:<pre class='hljs'>git push origin HEAD</pre></li>
+              <li>...is shorthand for this:<pre class='hljs'>git push origin master</pre></li>
+            </ul>
+        </section>
+
+        <section>
           <h3>Merging</h3>
             <ul>
               <li>switch to branch you want to merge to<pre class='hljs'>git checkout branch-to-merge-to</pre></li>
