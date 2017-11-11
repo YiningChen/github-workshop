@@ -2,3 +2,13 @@
   font-size: 48px;
   line-height: 50px;
 }
+
+.reveal pre.medium {
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.reveal pre.large {
+  font-size: 48px;
+  line-height: 50px;
+}

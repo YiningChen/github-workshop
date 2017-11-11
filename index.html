@@ -51,11 +51,11 @@
             <pre class="hljs"><code data-trim data-noescape class="large">
             git branch
             git merge
+            git checkout
             git revert
             git cherry-pick
             git stash
             git diff
-            git log
             </code></pre>
           <aside class="notes">
             ask about operating systems
@@ -66,31 +66,39 @@
           
             <h3>What about these?</h3>
             <pre class="hljs"><code data-trim data-noescape class="large" style="max-height: 500px;">
-						git cat-file
-						git check-ignore
-						git checkout-index
-						git commit-tree
-						git count-objects
-						git diff-index
-						git for-each-ref
-						git hash-object
-						git ls-files
-						git merge-base
-						git read-tree
-						git rev-list
-						git rev-parse
-						git show-ref
-						git symbolic-ref
-						git update-index
-						git update-ref
-						git verify-pack
-						git write-tree
+            git cat-file
+            git check-ignore
+            git checkout-index
+            git commit-tree
+            git count-objects
+            git diff-index
+            git for-each-ref
+            git hash-object
+            git ls-files
+            git merge-base
+            git read-tree
+            git rev-list
+            git rev-parse
+            git show-ref
+            git symbolic-ref
+            git update-index
+            git update-ref
+            git verify-pack
+            git write-tree
             </code></pre>
           <aside class="notes">
             ask about operating systems
           </aside>
         </section>
 
+        <section>
+          <h2>What is git?</h2>
+          <ul>
+            <li>version control system</li>
+            <li>not the same thing as github!</li>
+          </ul>
+        </section>
+ 
         <section>
           <h2>Why is git awesome?</h2>
           <ul>
@@ -103,15 +111,12 @@
         <section>
           <h2>Setting up a repo</h2>
           <ul>
-            <li>Setting up github for the first time:
-            <ul>
-              <li><a href="https://help.github.com/articles/set-up-git/">Set up</a></li>
-              <li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">SSH keys</a></li>
-            </ul>
+            <li>A repository contains all of the commits (or changes) to your codebase, branches included!</li>
+            <li>Creating A Repo: <a href="https://github.com/new">follow the directions here!</a></li>
+            <li>Forking A Repo: <a href="https://help.github.com/articles/fork-a-repo/">click fork!</a></li>
+            <li>Clone (i.e. download) the repo!:
+              <pre class="hljs medium">git clone git@github.com:username/repo.git</pre>
             </li>
-            <li>Creating: <a href="https://github.com/new">follow the directions here!</a></li>
-            <li>Forking: <a href="https://help.github.com/articles/fork-a-repo/">click fork!</a></li>
-            <li>Clone (i.e. download) your repo!:<pre class="hljs">git clone git@github.com:username/repo.git</pre></li>
           </ul>
         </section>
 
@@ -131,32 +136,52 @@ git commit -m 'I am a helpful message'
 
 <span style="color:grey">// right now this commit is still local (only on your computer)
 // push this change online!</span>
-git push -u origin HEAD
+git push
             </pre>
           </section>
 
           <section>
             <h3>Seeing the changes you've made:</h3>
             <ul>
-              <li>see which files you've changed:<pre class='hljs'>git status</pre></li>
-              <li>see the actual changes<pre class='hljs'>git diff</pre></li>
+              <li>see which files you've changed:<pre class='hljs large'>git status</pre></li>
+              <li>see the actual changes<pre class='hljs large'>git diff</pre></li>
             </ul>
           </section>
 
           <section>
             <h3>Adding changes to be commited:</h3>
             <ul>
-              <li>add all changes: <pre class='hljs'>git add .</pre></li>
-              <li>add just a file or folder: <pre class='hljs'>git add path/to/file</pre></li>
-              <li>ah! nvm! I don't want any of these changes!😱 <pre class='hljs'>git reset</pre></li>
+              <li>add all changes: <pre class='hljs large'>git add .</pre></li>
+              <li>add just a file or folder: <pre class='hljs large'>git add path/to/file</pre></li>
+              <li>ah! nvm! I don't want any of these changes!😱 <pre class='hljs large'>git reset</pre></li>
             </ul>
           </section>
 
           <section>
+            <h3>Commiting and Pushing the change:</h3>
+            <ul>
+              <li>Commit with a message:
+                <pre class='hljs large'>git commit -m 'helpful message'     </pre>
+              </li>
+              <li>Push to remote origin:
+                <pre class='hljs large'>git push origin HEAD</pre>
+              </li>
+              <li>Now someone else can 
+                <pre class='hljs large'>git pull</pre> to get your changes!
+              </li>
+            </ul>
+          </section>
+
+
+          <section>
             <h3>Oh shoot...I don't want those changes but already pushed:</h3>
             <ul>
-              <li>get the commit number from log<pre class='hljs'>git log</pre></li>
-              <li>revert that commit<pre class='hljs'>git revert 784fa95905f4f9f409bb567fe3a7ca48998825fd</pre></li>
+              <li>get the commit hash from the log
+                <pre class='hljs medium'>git log</pre>
+              </li>
+              <li>revert that commit
+                <pre class='hljs medium'>git revert 784fa95905f4f9f409bb567fe3a7ca48998825fd         </pre>
+              </li>
               <li>(don't forget to push!)</li>
             </ul>
           </section>
@@ -164,8 +189,8 @@ git push -u origin HEAD
         </section>
 
         <section data-background="https://az616578.vo.msecnd.net/files/2015/11/26/635841444292998546247571404_sbpatrick.gif">
-          <h3 style="background:#222; opacity:0.75">git status is your best friend</h3>
-            <ul style="background:#222; opacity:0.75">
+          <h3 style="background:#222">git status is your best friend</h3>
+            <ul style="background:#222">
               <li>always safe to use</li>
               <li>see which files changed</li>
               <li>see which files haven't been added</li>
